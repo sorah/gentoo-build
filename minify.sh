@@ -1,5 +1,9 @@
 #!/bin/bash
-output="$(pwd)/${1:-gentoo-build.sh}"
+if echo "${1}" | grep -q '^/'; then
+  output="${1}"
+else
+  output="$(pwd)/${1:-gentoo-build.sh}"
+fi
 
 cd "$(dirname $0)"
 
