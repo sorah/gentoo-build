@@ -8,8 +8,8 @@
 ### Stage3, portage snapshot
 
 export GB_STAGE3=latest
-export GB_STAGE3_MIRROR="ftp://ftp.iij.ad.jp/pub/linux/gentoo/"
-export GB_PORTAGE_SNAPSHOT="http://ftp.iij.ad.jp/pub/linux/gentoo/snapshots/portage-latest.tar.xz"
+# this should be ftp, when using latest
+export GB_STAGE3_MIRROR="ftp://ftp.iij.ad.jp/pub/linux/gentoo"
 
 ### Root devices
 
@@ -39,14 +39,13 @@ export GB_REMOVE_PORTAGE=0
 
 ### make.conf
 
-export GB_GENTOO_MIRRORS="http://ftp.iij.ad.jp/pub/linux/gentoo/ http://ftp.jaist.ac.jp/pub/Linux/Gentoo/ ftp://ftp.jaist.ac.jp/pub/Linux/Gentoo/"
-export GB_GENTOO_SYNC="rsync://rsync.jp.gentoo.org/gentoo-portage"
 #export GB_FEATURES=
 #export GB_USE=
+#export GB_CFLAGS="-O2 -pipe"
 
 ### Linux kernel
 
-export GB_KERNEL_PACKAGE='>=gentoo-sources-4.0.1'
+export GB_KERNEL_PACKAGE='>=sys-kernel/gentoo-sources-4.0.1'
 export GB_KERNEL_CONFIG="https://raw.githubusercontent.com/sorah/config/master/linux/gentoo.config"
 
 ### Default user
@@ -65,6 +64,4 @@ export GB_TIMEZONE=UTC
 # (not implemented)
 # export GB_DISTCC_HOSTS=""
 # export GB_DISTCC_MAKEOPTS=""
-
-
 
