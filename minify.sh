@@ -16,8 +16,9 @@ if ! sed --version 2>&1 | grep -q 'GNU sed'; then
 else
   SEDCMD=sed
 fi
-$SEDCMD '0,/^exit$/d' $0 | base64 --decode | tar xjf - -C $dest 
-exit
+$SEDCMD '0,/^exec /d' $0 | base64 --decode | tar xjf - -C $dest
+cd $dest
+exec ./build.sh
 EOF
 
 chmod +x $output
