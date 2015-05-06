@@ -2,7 +2,7 @@
 set -x
 set -e
 
-useradd_args="-m '${GB_USER_LOGIN}'"
+useradd_args="-m '${GB_USER_LOGIN}' -G wheel"
 if [ -n "${GB_USER_UID}" ]; then
   groupadd="groupadd -g ${GB_USER_UID} ${GB_USER_LOGIN}"
   useradd_args="-u ${GB_USER_UID} -g ${GB_USER_UID} ${useradd_args}"
