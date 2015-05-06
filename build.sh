@@ -3,7 +3,7 @@
 set -x
 set -e
 
-source variables.sh
+source "${1:-variables.sh}"
 
 ./validate.sh
 
