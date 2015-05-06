@@ -16,7 +16,7 @@ else
 Name=${iface}
 
 [Network]
-DHCP=ipv4
+DHCP=both
 EOF
 fi
 
