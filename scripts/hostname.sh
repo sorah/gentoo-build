@@ -2,4 +2,4 @@
 set -x
 set -e
 
-echo "${GB_HOSTNAME}" > /etc/hostname
+echo "${GB_HOSTNAME}" > ${GB_ROOT}/etc/hostname
