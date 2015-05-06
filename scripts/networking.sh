@@ -25,4 +25,5 @@ source /etc/profile
 set -x
 set -e
 ln -sfv /usr/lib64/systemd/system/systemd-networkd.service /etc/systemd/system/multi-user.target.wants/systemd-networkd.service
+ln -sfv /usr/lib64/systemd/system/systemd-resolved.service /etc/systemd/system/multi-user.target.wants/systemd-resolved.service
 EOF
