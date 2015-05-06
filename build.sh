@@ -5,6 +5,8 @@ set -e
 
 source "${1:-variables.sh}"
 
+cd "$(dirname $0)"
+
 ./validate.sh
 
 if [ "_$GB_PARTITIONING" = "_1" ]; then
