@@ -44,6 +44,7 @@ _amazon*)
   export GB_ROOTDEVICE=xvdf
   export GB_PARTITIONING=0
   export GB_ROOT_PARTITION=1
+  export GB_GRUB_CONSOLE=1
 esac
 
 env | grep '^GB_'
