@@ -10,6 +10,9 @@ cd "$(dirname $0)"
 ./validate.sh
 
 if [ "_$GB_PARTITIONING" = "_1" ]; then
+  export GB_ROOT_PARTITION=3
+  export GB_BOOT_PARTITION=1
+  export GB_BOOT_FSTYPE=ext4
   ./scripts/partition.sh
   ./scripts/mount.sh
 fi

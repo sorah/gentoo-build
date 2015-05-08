@@ -2,7 +2,7 @@
 set -x
 set -e
 
-cat > ${GB_ROOT}/etc/fstab <<EOF
-/dev/${GB_ROOTDEVICE}1 /boot ext4 defaults,noatime 1 1
-/dev/${GB_ROOTDEVICE}3 / ${GB_ROOT_FSTYPE} defaults,noatime 1 2
-EOF
+echo "/dev/${GB_ROOTDEVICE}${GB_ROOT_PARTITION} / ${GB_ROOT_FSTYPE} defaults,noatime 1 2" > ${GB_ROOT}/etc/fstab
+if [ -n "${GB_BOOT_PARTITION}" -a -n "${GB_BOOT_FSTYPE}" ]; then
+  echo "/dev/${GB_ROOTDEVICE}${GB_BOOT_PARTITION} /boot ${GB_BOOT_FSTYPE} defaults,noatime 1 1" >> ${GB_ROOT}/etc/fstab
+fi

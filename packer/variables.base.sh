@@ -42,6 +42,8 @@ _amazon*)
   export GB_ADD_STEPS="aws ${GB_ADD_STEPS}"
   export GB_USER_LOGIN=gentoo
   export GB_ROOTDEVICE=xvdf
+  export GB_PARTITIONING=0
+  export GB_ROOT_PARTITION=1
 esac
 
 env | grep '^GB_'

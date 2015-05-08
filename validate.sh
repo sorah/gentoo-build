@@ -22,13 +22,29 @@ fi
 [ -z "$GB_ROOT" ] && err "GB_ROOT is required"
 
 if [ -n "$GB_PARTITIONING" ]; then
-  if [ "$GB_PARTITIONING" != "1" ]; then
-    err "GB_PARTITIONING should be '1' or empty"
+  if [ "$GB_PARTITIONING" != "1" -a "$GB_PARTITIONING" != "0" ]; then
+    err "GB_PARTITIONING should be '1' or '0' or empty"
   fi
 fi
 
-if [ "_$GB_ROOT_FSTYPE" != "_xfs" -a "_$GB_ROOT_FSTYPE" != "_ext4" ]; then
-  err "GB_ROOT_FSTIPE should be xfs or ext4"
+if [ -z "${GB_PARTITIONING}" -o "_${GB_PARTITIONING}" = "_0" ]; then
+  if [ -z "${GB_ROOT_PARTITION}" -o -z "${GB_ROOT_FSTYPE}" ]; then
+    err "GB_ROOT_PARTITION and GB_ROOT_FSTYPE should be provided when GB_PARTITIONING is off"
+  fi
+
+  if [ -n "${GB_BOOT_PARTITION}" -o -n "${GB_BOOT_FSTYPE}" ]; then
+    if [ -z "${GB_BOOT_PARTITION}" ]; then
+      err "GB_BOOT_PARTITION is required when GB_BOOT_FSTYPE is present"
+    fi
+
+    if [ -z "${GB_BOOT_FSTYPE}" ]; then
+      err "GB_BOOT_FSTYPE is required when GB_BOOT_PARTITION is present"
+    fi
+  fi
+else
+  if [ "_$GB_ROOT_FSTYPE" != "_xfs" -a "_$GB_ROOT_FSTYPE" != "_ext4" ]; then
+    err "GB_ROOT_FSTYPE should be xfs or ext4"
+  fi
 fi
 
 [ -z "$GB_HOSTNAME" ] && err "GB_HOSTNAME is required"
