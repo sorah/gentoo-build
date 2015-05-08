@@ -1,6 +1,8 @@
 {
   "description": "gentoo-build",
   "variables": {
+    "subnet_id": null,
+    "vpc_id": null,
     "imagename": "{{isotime `2006-01-02`}}-{{uuid}}",
     "build_password": "HXHW0C6ma3HQzd2"
   },
@@ -31,6 +33,20 @@
       "ssh_password": "{{user `build_password`}}",
       "ssh_wait_timeout": "20s",
       "vm_name": "gentoo-{{user `imagename`}}"
+    },
+    {
+      "type": "amazon-scratch",
+      "region": "ap-northeast-1",
+      "source_ami": "ami-936d9d93",
+      "subnet_id": "{{user `subnet_id`}}",
+      "vpc_id": "{{user `vpc_id`}}",
+      "associate_public_ip_address": true,
+      "instance_type": "c4.xlarge",
+      "ssh_username": "ubuntu",
+      "ami_name": "gentoo-{{user `imagename`}}",
+      "worker_device_name": "/dev/sdf",
+      "volume_size": 10,
+      "volume_type": "gp2"
     }
   ],
   "provisioners": [
