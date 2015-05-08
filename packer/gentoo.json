@@ -1,0 +1,84 @@
+{
+  "description": "gentoo-build",
+  "variables": {
+    "imagename": "{{isotime `2006-01-02`}}-{{uuid}}",
+    "build_password": "HXHW0C6ma3HQzd2"
+  },
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "guest_additions_mode": "disable",
+      "guest_os_type": "Gentoo_64",
+      "disk_size": 40000,
+      "vboxmanage": [
+        ["modifyvm", "{{.Name}}", "--memory", "1024"],
+        ["modifyvm", "{{.Name}}", "--cpus", "2"]
+      ],
+      "headless": false,
+      "iso_checksum": "e8805433699acd7b6df38ff893eddad8c6f287a09cc34be3f6fef46d3e5056c4",
+      "iso_checksum_type": "sha256",
+      "iso_url": "http://downloads.sourceforge.net/project/systemrescuecd/sysresccd-x86/4.5.2/systemrescuecd-x86-4.5.2.iso",
+      "boot_wait": "5s",
+      "boot_command": [
+        "<esc>",
+        "<wait>",
+        "rescue64 setkmap=us rootpass={{user `build_password`}}",
+        "<enter>",
+        "<wait10>"
+      ],
+      "shutdown_command": "poweroff",
+      "ssh_username": "root",
+      "ssh_password": "{{user `build_password`}}",
+      "ssh_wait_timeout": "20s",
+      "vm_name": "gentoo-{{user `imagename`}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "mkdir -p /tmp/gentoo-build"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "./build.sh",
+      "destination": "/tmp/gentoo-build/build.sh"
+    },
+    {
+      "type": "file",
+      "source": "./validate.sh",
+      "destination": "/tmp/gentoo-build/validate.sh"
+    },
+    {
+      "type": "file",
+      "source": "./scripts",
+      "destination": "/tmp/gentoo-build"
+    },
+    {
+      "type": "file",
+      "source": "./packer/variables.base.sh",
+      "destination": "/tmp/gentoo-build/variables.sh"
+    },
+    {
+      "type": "shell",
+      "inline_shebang": "/bin/bash",
+      "inline": [
+        "set -e",
+        "set -x",
+        "chmod +x /tmp/gentoo-build/build.sh",
+        "chmod +x /tmp/gentoo-build/validate.sh",
+        "chmod +x /tmp/gentoo-build/scripts/*.sh",
+        "varfile=/tmp/gentoo-build/variables.sh",
+        "if [ \"_$(whoami)\" != \"_root\" ]; then sudo env PACKER_BUILDER_TYPE=$PACKER_BUILDER_TYPE /tmp/gentoo-build/build.sh $varfile; else /tmp/gentoo-build/build.sh $varfile; fi"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "gentoo-{{user `imagename`}}.box",
+      "only": ["virtualbox-iso"]
+    }
+  ]
+}
