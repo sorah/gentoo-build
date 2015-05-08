@@ -16,7 +16,7 @@ set -e
 
 if id '${GB_USER_LOGIN}' >/dev/null 2>&1; then
   echo 'skipping user'
-  exit 1
+  exit 0
 fi
 
 ${groupadd}
