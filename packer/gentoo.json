@@ -35,21 +35,30 @@
       "vm_name": "gentoo-{{user `imagename`}}"
     },
     {
-      "type": "amazon-scratch",
+      "type": "amazon-ebs",
       "region": "ap-northeast-1",
-      "source_ami": "ami-936d9d93",
+      "source_ami": "ami-5ea1675e",
       "subnet_id": "{{user `subnet_id`}}",
       "vpc_id": "{{user `vpc_id`}}",
       "associate_public_ip_address": true,
       "instance_type": "c4.xlarge",
       "ssh_username": "ubuntu",
+      "ssh_port": 122,
       "ami_name": "gentoo-{{user `imagename`}}",
-      "worker_device_name": "/dev/sdf",
-      "volume_size": 10,
-      "volume_type": "gp2"
+      "user_data_file": "./packer/aws-user-data.sh"
     }
   ],
   "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "sudo umount /oldroot",
+        "sudo mkdir -p /mnt/gentoo",
+        "sudo mkfs.ext4 -F /dev/xvda1",
+        "sudo mount /dev/xvda1 /mnt/gentoo"
+      ],
+      "only": ["amazon-ebs"]
+    },
     {
       "type": "shell",
       "inline": [
