@@ -16,5 +16,6 @@ source /etc/profile
 set -x
 set -e
 rm -rf /usr/portage
+rm -fv /stage3.tar.bz2
 EOF
 fi
