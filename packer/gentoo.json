@@ -41,7 +41,7 @@
       "subnet_id": "{{user `subnet_id`}}",
       "vpc_id": "{{user `vpc_id`}}",
       "associate_public_ip_address": true,
-      "instance_type": "c4.xlarge",
+      "instance_type": "c4.2xlarge",
       "ssh_username": "ubuntu",
       "ssh_port": 122,
       "ami_name": "gentoo-{{user `imagename`}}",
