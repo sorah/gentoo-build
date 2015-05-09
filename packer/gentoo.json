@@ -4,6 +4,7 @@
     "subnet_id": null,
     "vpc_id": null,
     "imagename": "{{isotime `2006-01-02`}}-{{uuid}}",
+    "ami_group": "all",
     "build_password": "HXHW0C6ma3HQzd2"
   },
   "builders": [
@@ -45,6 +46,7 @@
       "ssh_username": "ubuntu",
       "ssh_port": 122,
       "ami_name": "gentoo-{{user `imagename`}}",
+      "ami_groups": ["{{user `ami_group`}}"]
       "user_data_file": "./packer/aws-user-data.sh",
       "ami_block_device_mappings": [
         {
