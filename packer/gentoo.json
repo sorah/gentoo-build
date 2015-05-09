@@ -46,7 +46,7 @@
       "ssh_username": "ubuntu",
       "ssh_port": 122,
       "ami_name": "gentoo-{{user `imagename`}}",
-      "ami_groups": ["{{user `ami_group`}}"]
+      "ami_groups": ["{{user `ami_group`}}"],
       "user_data_file": "./packer/aws-user-data.sh",
       "ami_block_device_mappings": [
         {
