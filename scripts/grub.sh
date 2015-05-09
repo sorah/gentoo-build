@@ -16,7 +16,8 @@ if [ "_${GB_GRUB_CONSOLE}" = "_1" ]; then
   set -x
   set -e
 
-  if ! grep -q '^GRUB_TERMINAL=console' /etc/default/grub; then
+  if ! grep -q '^# gentoo-build GB_GRUB_CONSOLE' /etc/default/grub; then
+    echo '# gentoo-build GB_GRUB_CONSOLE' >> /etc/default/grub
     echo 'GRUB_CMDLINE_LINUX="${GRUB_CMDLINE_LINUX} console=tty1 console=ttyS0"' >> /etc/default/grub
     echo 'GRUB_TERMINAL=console' >> /etc/default/grub
   fi
@@ -28,7 +29,8 @@ source /etc/profile
 set -x
 set -e
 
-if ! grep -q 'init=/usr/lib/systemd/systemd' /etc/default/grub; then
+if ! grep -q '^# gentoo-build$' /etc/default/grub; then
+  echo '# gentoo-build' >> /etc/default/grub
   echo 'GRUB_DEFAULT=0' >> /etc/default/grub
   echo 'GRUB_HIDDEN_TIMEOUT=0' >> /etc/default/grub
   echo 'GRUB_HIDDEN_TIMEOUT_QUIET=true' >> /etc/default/grub
