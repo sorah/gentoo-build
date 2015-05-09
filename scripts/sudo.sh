@@ -2,6 +2,11 @@
 set -x
 set -e
 
+if [ "_${GB_SKIP_SUDO}" = "_1" ]; then
+  echo 'skipping sudo.sh'
+  exit 0
+fi
+
 chroot ${GB_ROOT} /bin/bash <<-'EOF'
 source /etc/profile
 set -x
