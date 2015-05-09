@@ -3,8 +3,8 @@
   "variables": {
     "subnet_id": null,
     "vpc_id": null,
-    "imagename": "{{isotime `2006-01-02`}}-{{uuid}}",
     "ami_group": "all",
+    "imagename": "{{isotime `20060102`}}-{{uuid}}",
     "build_password": "HXHW0C6ma3HQzd2"
   },
   "builders": [
