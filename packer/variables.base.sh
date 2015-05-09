@@ -48,5 +48,7 @@ _amazon*)
   export GB_GRUB_CONSOLE=1
 esac
 
+export MAKEOPTS="-j$(nproc)"
+
 env | grep '^GB_'
 env | grep 'PACKER'
