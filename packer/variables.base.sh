@@ -37,6 +37,7 @@ _virtualbox*)
   export GB_ADD_STEPS="vagrant virtualbox ${GB_ADD_STEPS}"
   export GB_USER_PASSWORD=vagrant
   export GB_USER_LOGIN=vagrant
+  export GB_GRUB_NO_TIMEOUT=1
   ;;
 _amazon*)
   export GB_ADD_STEPS="cloud-init aws ${GB_ADD_STEPS}"
@@ -46,6 +47,7 @@ _amazon*)
   export GB_PARTITIONING=0
   export GB_ROOT_PARTITION=1
   export GB_GRUB_CONSOLE=1
+  export GB_GRUB_NO_TIMEOUT=1
 esac
 
 export MAKEOPTS="-j$(nproc)"
