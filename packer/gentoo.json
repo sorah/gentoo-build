@@ -5,6 +5,9 @@
     "vpc_id": null,
     "ami_group": "all",
     "imagename": "{{isotime `20060102`}}-{{uuid}}",
+    "box_version": "{{isotime `20060102.030405`}}",
+    "box_tag": "sorah/gentoo",
+    "vagrant_cloud_token": "{{env `ATLAS_TOKEN`}}",
     "build_password": "HXHW0C6ma3HQzd2"
   },
   "builders": [
@@ -120,10 +123,19 @@
     }
   ],
   "post-processors": [
-    {
-      "type": "vagrant",
-      "output": "gentoo-{{user `imagename`}}.box",
-      "only": ["virtualbox-iso"]
-    }
+    [
+      {
+        "type": "vagrant",
+        "output": "packer/box/gentoo-{{user `imagename`}}_{{.Provider}}.box",
+        "keep_input_artifact": true
+      },
+      {
+        "type": "vagrant-cloud",
+        "box_tag": "{{user `box_tag`}}",
+        "access_token": "{{user `vagrant_cloud_token`}}",
+        "version": "{{user `box_version`}}",
+        "version_description": "systemd Gentoo ({{user `imagename`}})"
+      }
+    ]
   ]
 }
