@@ -38,9 +38,13 @@ if ! grep -q '^# gentoo-build$' /etc/default/grub; then
 fi
 
 if grep -q ' /boot ' /proc/mounts; then
-  if grep ' /boot ' /proc/mounts | grep -q rw; then
+  if ! grep ' /boot ' /proc/mounts | grep -q rw; then
     mount -o rw,remount /boot
   fi
+fi
+
+if ! grep ' / ' /proc/mounts | grep -q rw; then
+  mount -o rw,remount /
 fi
 
 grub2-install --no-floppy /dev/${GB_ROOTDEVICE}
