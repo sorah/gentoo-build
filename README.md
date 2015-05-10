@@ -39,7 +39,7 @@ Name: gentoo-20150510-554f6362-2488-af28-0cf7-8163e30c0eba
 - ap-northeast-1: ami-225e9022
 - us-east-1: ami-98a1b7f0
 - us-west-1: ami-f7ed03b3
-- eu-central-1: TBD
+- eu-central-1: ami-1a8fb007
 
 ## Note
 
