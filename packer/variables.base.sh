@@ -41,7 +41,7 @@ _virtualbox*)
 _amazon*)
   export GB_ADD_STEPS="cloud-init aws ${GB_ADD_STEPS}"
   export GB_USER_LOGIN=
-  export GB_SKIP_SUDO=1
+  export GB_SKIP_SUDOERS=1
   export GB_ROOTDEVICE=xvda
   export GB_PARTITIONING=0
   export GB_ROOT_PARTITION=1
