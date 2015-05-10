@@ -134,7 +134,8 @@
         "box_tag": "{{user `box_tag`}}",
         "access_token": "{{user `vagrant_cloud_token`}}",
         "version": "{{user `box_version`}}",
-        "version_description": "systemd Gentoo ({{user `imagename`}})"
+        "version_description": "systemd Gentoo ({{user `imagename`}})",
+        "only": ["virtualbox-iso"]
       }
     ]
   ]
