@@ -7,6 +7,11 @@ source /etc/profile
 set -x
 set -e
 
+if [ -d /sys/firmware/efi ]; then
+  mkdir -p /etc/portage/package.use
+  echo 'sys-boot/grub grub_platforms_efi-32 grub_platforms_efi-64' > /etc/portage/package.use/grub
+fi
+
 emerge --noreplace -v sys-boot/grub
 EOF
 
