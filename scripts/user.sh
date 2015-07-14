@@ -38,5 +38,6 @@ mkdir ~${GB_USER_LOGIN}/.ssh
 echo '${GB_USER_SSH_AUTHORIZED_KEY}' >> ~${GB_USER_LOGIN}/.ssh/authorized_keys
 chmod 700 ~${GB_USER_LOGIN}/.ssh
 chmod 600 ~${GB_USER_LOGIN}/.ssh/authorized_keys
+chown ${GB_USER_LOGIN}:${GB_USER_LOGIN} ~${GB_USER_LOGIN}/.ssh ~${GB_USER_LOGIN}/.ssh/authorized_keys
 EOF
 fi
