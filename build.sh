@@ -11,7 +11,12 @@ cd "$(dirname $0)"
 
 if [ "_$GB_PARTITIONING" = "_1" ]; then
   export GB_ROOT_PARTITION=3
-  export GB_BOOT_PARTITION=1
+  if [ -d /sys/firmware/efi ]; then
+    export GB_EFI_PARTITION=1
+    export GB_BOOT_PARTITION=2
+  else
+    export GB_BOOT_PARTITION=1
+  fi
   export GB_BOOT_FSTYPE=ext4
   ./scripts/partition.sh
   ./scripts/mount.sh
