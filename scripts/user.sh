@@ -31,3 +31,12 @@ if printenv GB_USER_PASSWORD | grep -q .; then
   ( echo -n '${GB_USER_LOGIN}:' && printenv GB_USER_PASSWORD ) | chpasswd
 fi
 EOF
+
+if [ -n "${GB_USER_SSH_AUTHORIZED_KEY}" ]; then
+  chroot ${GB_ROOT} /bin/bash <<-EOF
+mkdir ~${GB_USER_LOGIN}/.ssh
+echo '${GB_USER_SSH_AUTHORIZED_KEY}' >> ~${GB_USER_LOGIN}/.ssh/authorized_keys
+chmod 700 ~${GB_USER_LOGIN}/.ssh
+chmod 600 ~${GB_USER_LOGIN}/.ssh/authorized_keys
+EOF
+fi
