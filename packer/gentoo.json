@@ -52,6 +52,13 @@
       "ami_groups": ["{{user `ami_group`}}"],
       "ami_regions": ["ap-northeast-1", "us-east-1", "us-west-1", "eu-central-1"],
       "user_data_file": "./packer/aws-user-data.sh",
+      "launch_block_device_mappings": [
+        {
+          "device_name": "/dev/sda1",
+          "volume_size": 15,
+          "delete_on_termination": true
+        }
+      ],
       "ami_block_device_mappings": [
         {
             "device_name": "/dev/sdb",
