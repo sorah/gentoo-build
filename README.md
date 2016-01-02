@@ -34,17 +34,17 @@ https://atlas.hashicorp.com/sorah/boxes/gentoo
 
 ### AWS EC2 AMI
 
-Name: gentoo-20151222-5679bd41-d0f6-b4a0-ff7d-50aad1c0c5ad
+Name: gentoo-20151225-567d7dd1-fae2-7fd4-7ad1-e9895cf749eb
 
-- ap-northeast-1: [`ami-00b1856e`](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-00b1856e)
-- ap-southeast-1: [`ami-01cb0962`](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-01cb0962)
-- eu-central-1: [`ami-b6736cda`](https://console.aws.amazon.com/ec2/home?region=eu-central-1#launchAmi=ami-b6736cda)
-- sa-east-1: [`ami-0300876f`](https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-0300876f)
-- us-east-1: [`ami-83d680e9`](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-83d680e9)
-- us-west-1: [`ami-b4345ed4`](https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-b4345ed4)
-- us-west-2: [`ami-bac8d6db`](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-bac8d6db)
+- ap-northeast-1: [`ami-b9eed9d7`](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-b9eed9d7)
+- ap-southeast-1: [`ami-4d05c72e`](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-4d05c72e)
+- eu-central-1: [`ami-f9382795`](https://console.aws.amazon.com/ec2/home?region=eu-central-1#launchAmi=ami-f9382795)
+- sa-east-1: [`ami-2a20a746`](https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-2a20a746)
+- us-east-1: [`ami-5e2e7e34`](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-5e2e7e34)
+- us-west-1: [`ami-857c16e5`](https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-857c16e5)
+- us-west-2: [`ami-dc4851bd`](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-dc4851bd)
 
-<!-- :'<,'>s/\v^(.+): (.+)$/- \1: [`\2`](https:\/\/console.aws.amazon.com\/ec2\/home?region=\1#launchAmi=\2)/ -->
+<!-- s/\v^(.+): (.+)$/- \1: [`\2`](https:\/\/console.aws.amazon.com\/ec2\/home?region=\1#launchAmi=\2)/ -->
 
 ## Note
 
