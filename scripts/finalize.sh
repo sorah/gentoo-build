@@ -17,5 +17,6 @@ set -x
 set -e
 rm -rf /usr/portage
 rm -fv /stage3.tar.bz2
+rm -f /etc/machine-id
 EOF
 fi
