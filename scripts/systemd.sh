@@ -11,7 +11,11 @@ if [ -e /usr/lib/systemd/systemd ]; then
   exit 0
 fi
 
-emerge --unmerge sys-fs/udev
+emerge --unmerge sys-fs/udev || :
+emerge --deselect sys-fs/udev || :
+emerge --unmerge sys-fs/eudev || :
+emerge --deselect sys-fs/eudev || :
+
 ln -sf /proc/self/mounts /etc/mtab
 emerge -v sys-apps/systemd
 emerge -vDN @world
