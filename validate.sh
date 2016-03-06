@@ -49,8 +49,10 @@ fi
 
 [ -z "$GB_HOSTNAME" ] && err "GB_HOSTNAME is required"
 
-[ -z "$GB_KERNEL_PACKAGE" ] && err "GB_KERNEL_PACKAGE is required"
-[ -z "$GB_KERNEL_CONFIG" ] && err "GB_KERNEL_CONFIG is required"
+if [ -z "$GB_SKIP_KERNEL" ]; then
+  [ -z "$GB_KERNEL_PACKAGE" ] && err "GB_KERNEL_PACKAGE is required"
+  [ -z "$GB_KERNEL_CONFIG" ] && err "GB_KERNEL_CONFIG is required"
+fi
 [ -z "$GB_TIMEZONE" ] && err "GB_TIMEZONE is required"
 
 exit $retval

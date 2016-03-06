@@ -42,8 +42,13 @@ fi
 ./scripts/sshd.sh
 ./scripts/portage-utils.sh
 
-./scripts/kernel.sh
-./scripts/grub.sh
+if [ -z "${GB_SKIP_KERNEL}" ]; then
+  ./scripts/kernel.sh
+fi
+
+if [ -z "${GB_SKIP_GRUB}" ]; then
+  ./scripts/grub.sh
+fi
 
 for x in ${GB_ADD_STEPS}; do
   ./scripts/${x}.sh
