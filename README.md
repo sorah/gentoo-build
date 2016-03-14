@@ -34,15 +34,15 @@ https://atlas.hashicorp.com/sorah/boxes/gentoo
 
 ### AWS EC2 AMI
 
-Name: gentoo-20160307-56dd9d6a-9c3c-6b70-0654-acc1decfb75b
+Name: gentoo-20151225-567d7dd1-fae2-7fd4-7ad1-e9895cf749eb
 
-- ap-northeast-1: [`ami-3d898653`](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-3d898653)
-- ap-southeast-1: [`ami-7221e911`](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-7221e911)
-- eu-central-1: [`ami-66e20609`](https://console.aws.amazon.com/ec2/home?region=eu-central-1#launchAmi=ami-66e20609)
-- sa-east-1: [`ami-0fda5763`](https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-0fda5763)
-- us-east-1: [`ami-7028121a`](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-7028121a)
-- us-west-1: [`ami-9c6310fc`](https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-9c6310fc)
-- us-west-2: [`ami-21e00f41`](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-21e00f41)
+- ap-northeast-1: [`ami-b9eed9d7`](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-b9eed9d7)
+- ap-southeast-1: [`ami-4d05c72e`](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-4d05c72e)
+- eu-central-1: [`ami-f9382795`](https://console.aws.amazon.com/ec2/home?region=eu-central-1#launchAmi=ami-f9382795)
+- sa-east-1: [`ami-2a20a746`](https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-2a20a746)
+- us-east-1: [`ami-5e2e7e34`](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-5e2e7e34)
+- us-west-1: [`ami-857c16e5`](https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-857c16e5)
+- us-west-2: [`ami-dc4851bd`](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-dc4851bd)
 
 <!-- s/\v^(.+): (.+)$/- \1: [`\2`](https:\/\/console.aws.amazon.com\/ec2\/home?region=\1#launchAmi=\2)/ -->
 
