@@ -32,6 +32,9 @@ ext4)
 xfs)
   mkfs.xfs /dev/${GB_ROOTDEVICE}3
   ;;
+btrfs)
+  mkfs.btrfs /dev/${GB_ROOTDEVICE}3
+  ;;
 *)
   echo "unknown fs type ${GB_ROOT_FSTYPE}" >/dev/stderr
   exit 1

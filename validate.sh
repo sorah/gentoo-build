@@ -42,8 +42,8 @@ if [ -z "${GB_PARTITIONING}" -o "_${GB_PARTITIONING}" = "_0" ]; then
     fi
   fi
 else
-  if [ "_$GB_ROOT_FSTYPE" != "_xfs" -a "_$GB_ROOT_FSTYPE" != "_ext4" ]; then
-    err "GB_ROOT_FSTYPE should be xfs or ext4"
+  if [ "_$GB_ROOT_FSTYPE" != "_xfs" -a "_$GB_ROOT_FSTYPE" != "_ext4" -a "_$GB_ROOT_FSTYPE" != "_btrfs" ]; then
+    err "GB_ROOT_FSTYPE should be xfs or ext4 or btrfs"
   fi
 fi
 
