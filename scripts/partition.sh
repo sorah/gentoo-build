@@ -10,14 +10,14 @@ fi
 if [ -d /sys/firmware/efi ]; then
   sgdisk \
     -n 1:0:+256M -t 1:ef00 -c 1:"efi-system" \
-    -n 2:0:+256M -t 2:8300 -c 2:"linux-boot" \
+    -n 2:0:+${GB_BOOT_PARTITION_SIZE:-256M} -t 2:8300 -c 2:"linux-boot" \
     -n 3:0:0     -t 3:8300 -c 3:"linux-root" \
     -p /dev/${GB_ROOTDEVICE}
 
   mkfs.vfat /dev/${GB_ROOTDEVICE}1
 else
   sgdisk \
-    -n 1:0:+128M -t 1:8300 -c 1:"linux-boot" \
+    -n 1:0:+${GB_BOOT_PARTITION_SIZE:-128M} -t 1:8300 -c 1:"linux-boot" \
     -n 2:0:+32M  -t 2:ef02 -c 2:"bios-boot"  \
     -n 3:0:0     -t 3:8300 -c 3:"linux-root" \
     -p /dev/${GB_ROOTDEVICE}
