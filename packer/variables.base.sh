@@ -20,8 +20,8 @@ export GB_REMOVE_PORTAGE=1
 
 ### Linux kernel
 
-export GB_KERNEL_PACKAGE='>=sys-kernel/gentoo-sources-4.3.3'
-export GB_KERNEL_CONFIG="https://gist.githubusercontent.com/sorah/b573516ef9539b7b0788/raw/00c976a9c965914ec2ddc23081aa1b3d05895a48/gistfile1.txt"
+export GB_KERNEL_PACKAGE='>=sys-kernel/gentoo-sources-4.5.0'
+export GB_KERNEL_CONFIG="https://raw.githubusercontent.com/sorah/config/master/linux/gentoo.config"
 
 ### Default user
 
