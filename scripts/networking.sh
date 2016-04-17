@@ -17,6 +17,9 @@ Name=${iface}
 
 [Network]
 DHCP=both
+
+[DHCP]
+UseDomains=yes
 EOF
 fi
 
