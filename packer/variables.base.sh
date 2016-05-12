@@ -49,6 +49,14 @@ _amazon*)
   export GB_GRUB_CONSOLE=1
   export GB_GRUB_NO_TIMEOUT=1
   export GB_IFACE='eth* eno* enp* ens*'
+  ;;
+_qemu*)
+  export GB_ADD_STEPS="vagrant ${GB_ADD_STEPS}"
+  export GB_USER_PASSWORD=vagrant
+  export GB_USER_LOGIN=vagrant
+  export GB_ROOTDEVICE=vda
+  export GB_IFACE='eth* eno* enp* ens*'
+  ;;
 esac
 
 export MAKEOPTS="-j$(nproc)"

@@ -39,6 +39,36 @@
       "vm_name": "gentoo-{{user `imagename`}}"
     },
     {
+      "type": "qemu",
+      "format": "qcow2",
+      "accelerator": "kvm",
+      "disk_size": 15000,
+      "headless": false,
+      "iso_url": "http://downloads.sourceforge.net/project/systemrescuecd/sysresccd-x86/4.5.2/systemrescuecd-x86-4.5.2.iso",
+      "iso_checksum": "e8805433699acd7b6df38ff893eddad8c6f287a09cc34be3f6fef46d3e5056c4",
+      "iso_checksum_type": "sha256",
+      "boot_wait": "5s",
+      "boot_command": [
+        "<esc>",
+        "<wait>",
+        "rescue64 setkmap=us rootpass={{user `build_password`}}",
+        "<enter>",
+        "<wait10>"
+      ],
+      "shutdown_command": "poweroff",
+      "ssh_username": "root",
+      "ssh_password": "{{user `build_password`}}",
+      "ssh_wait_timeout": "40s",
+      "vm_name": "gentoo-{{user `imagename`}}",
+      "net_device": "virtio-net",
+      "disk_interface": "virtio",
+      "qemuargs": [
+        ["-m", "2048M"],
+        ["-cpu", "Nehalem"],
+        ["-smp", "cpus=1,cores=3,maxcpus=3"]
+      ]
+    },
+    {
       "type": "amazon-ebs",
       "region": "ap-northeast-1",
       "source_ami": "ami-d3a194bd",
@@ -144,7 +174,7 @@
         "access_token": "{{user `vagrant_cloud_token`}}",
         "version": "{{user `box_version`}}",
         "version_description": "systemd Gentoo ({{user `imagename`}})",
-        "only": ["virtualbox-iso"]
+        "only": ["virtualbox-iso", "qemu"]
       }
     ]
   ]
