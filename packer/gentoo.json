@@ -17,8 +17,8 @@
       "guest_os_type": "Gentoo_64",
       "disk_size": 40000,
       "vboxmanage": [
-        ["modifyvm", "{{.Name}}", "--memory", "1024"],
-        ["modifyvm", "{{.Name}}", "--cpus", "2"]
+        ["modifyvm", "{{.Name}}", "--memory", "2048"],
+        ["modifyvm", "{{.Name}}", "--cpus", "3"]
       ],
       "headless": false,
       "iso_checksum": "e8805433699acd7b6df38ff893eddad8c6f287a09cc34be3f6fef46d3e5056c4",
