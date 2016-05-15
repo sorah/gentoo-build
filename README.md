@@ -28,21 +28,23 @@ packer build should be run in the repository root directory.
 You can use these if you can trust me. Note that the images are provided w/o any warranty. And the images can be removed w/o any notices.
 If you want persistent copy, build by your own.
 
-### Vagrant virtualbox
+### Vagrant (virtualbox, qemu, aws)
 
 https://atlas.hashicorp.com/sorah/boxes/gentoo
 
+Not frequently updated
+
 ### AWS EC2 AMI
 
-Name: gentoo-20160417-57132a82-4121-5c8b-e411-3fb9ae258e6e_aws
+Name: gentoo-20160514-5737a92e-acfc-9027-dab9-a405205660d2
 
-- ap-northeast-1: [`ami-13cdd17d`](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-13cdd17d)
-- ap-southeast-1: [`ami-3cb96d5f`](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-3cb96d5f)
-- eu-central-1: [`ami-4176962e`](https://console.aws.amazon.com/ec2/home?region=eu-central-1#launchAmi=ami-4176962e)
-- sa-east-1: [`ami-99901ef5`](https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-99901ef5)
-- us-east-1: [`ami-97938ffd`](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-97938ffd)
-- us-west-1: [`ami-9a4c33fa`](https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-9a4c33fa)
-- us-west-2: [`ami-e0e11780`](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-e0e11780)
+- ap-northeast-1: [`ami-3f34d25e`](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-3f34d25e)
+- ap-southeast-1: [`ami-601acc03`](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-601acc03)
+- eu-central-1: [`ami-1ba74b74`](https://console.aws.amazon.com/ec2/home?region=eu-central-1#launchAmi=ami-1ba74b74)
+- sa-east-1: [`ami-11961e7d`](https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-11961e7d)
+- us-east-1: [`ami-b3957cde`](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-b3957cde)
+- us-west-1: [`ami-3a0a725a`](https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-3a0a725a)
+- us-west-2: [`ami-d5ca36b5`](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-d5ca36b5)
 
 <!-- s/\v^(.+): (.+)$/- \1: [`\2`](https:\/\/console.aws.amazon.com\/ec2\/home?region=\1#launchAmi=\2)/ -->
 
