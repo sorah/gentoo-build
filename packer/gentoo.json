@@ -71,11 +71,11 @@
     {
       "type": "amazon-ebs",
       "region": "ap-northeast-1",
-      "source_ami": "ami-d3a194bd",
+      "source_ami": "ami-d82efcb9",
       "subnet_id": "{{user `subnet_id`}}",
       "vpc_id": "{{user `vpc_id`}}",
       "associate_public_ip_address": true,
-      "instance_type": "c3.4xlarge",
+      "instance_type": "c4.4xlarge",
       "ssh_username": "ubuntu",
       "ssh_port": 122,
       "ssh_timeout": "12m",
