@@ -36,17 +36,17 @@ Not frequently updated
 
 ### AWS EC2 AMI
 
-Name: gentoo-20160514-5737a92e-acfc-9027-dab9-a405205660d2
-
-- ap-northeast-1: [`ami-3f34d25e`](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-3f34d25e)
-- ap-southeast-1: [`ami-601acc03`](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-601acc03)
-- eu-central-1: [`ami-1ba74b74`](https://console.aws.amazon.com/ec2/home?region=eu-central-1#launchAmi=ami-1ba74b74)
-- sa-east-1: [`ami-11961e7d`](https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-11961e7d)
-- us-east-1: [`ami-b3957cde`](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-b3957cde)
-- us-west-1: [`ami-3a0a725a`](https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-3a0a725a)
-- us-west-2: [`ami-d5ca36b5`](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-d5ca36b5)
-
 <!-- s/\v^(.+): (.+)$/- \1: [`\2`](https:\/\/console.aws.amazon.com\/ec2\/home?region=\1#launchAmi=\2)/ -->
+
+gentoo-20161008-57f97153-669e-5a0e-b227-de1825257a12
+
+- ap-northeast-1: [`ami-8ca17aed`](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-8ca17aed)
+- ap-southeast-1: [`ami-4b8e2928`](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-4b8e2928)
+- eu-central-1: [`ami-9dbc42f2`](https://console.aws.amazon.com/ec2/home?region=eu-central-1#launchAmi=ami-9dbc42f2)
+- sa-east-1: [`ami-8f1785e3`](https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-8f1785e3)
+- us-east-1: [`ami-26f0be31`](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-26f0be31)
+- us-west-1: [`ami-84d891e4`](https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-84d891e4)
+- us-west-2: [`ami-2e68b04e`](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-2e68b04e)
 
 ## Note
 
