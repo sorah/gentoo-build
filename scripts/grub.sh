@@ -64,6 +64,6 @@ if ! grep ' / ' /proc/mounts | grep -q rw; then
   mount -o rw,remount /
 fi
 
-grub2-install --no-floppy /dev/${GB_ROOTDEVICE}
-grub2-mkconfig -o /boot/grub/grub.cfg
+grub-install --no-floppy /dev/${GB_ROOTDEVICE}
+grub-mkconfig -o /boot/grub/grub.cfg
 EOF
