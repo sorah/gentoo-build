@@ -24,7 +24,7 @@ EOF
 chmod +x $output
 
 if base64 --help | grep -q 'GNU coreutils'; then
-  tar cjf - --exclude=.git . | base64 -w 80 >> $output
+  tar cjf - --exclude=.git --exclude=packer/box --exclude=packer_cache --exclude=output-qemu . | base64 -w 80 >> $output
 else
-  tar cjf - --exclude=.git . | base64 -b 80 >> $output
+  tar cjf - --exclude=.git --exclude=packer/box --exclude=packer_cache --exclude=output-qemu . | base64 -b 80 >> $output
 fi
