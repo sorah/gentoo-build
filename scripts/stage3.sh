@@ -13,4 +13,4 @@ else
   wget -O "${GB_ROOT}/stage3.tar.bz2" "${GB_STAGE3_MIRROR}/releases/amd64/autobuilds/${GB_STAGE3}/stage3-amd64-${GB_STAGE3}.tar.bz2"
 fi
 
-tar xf "${GB_ROOT}/stage3.tar.bz2" -C "${GB_ROOT}"
+tar xpf "${GB_ROOT}/stage3.tar.bz2" --xattrs -C "${GB_ROOT}"
