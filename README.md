@@ -65,3 +65,5 @@ gentoo-20170130-588f5cc4-4ad5-a61a-2be6-5f4766962dfb
 - default user name is `gentoo`
   - NOPASSWD sudo access enabled for the user
   - default user creation is done via cloud-init.
+- IPv6 is not supported out-of-the-box
+  - As of Jan 31st, AWS' DHCPv6 server implementation doesn't respond to packets sent from systemd-networkd :/
