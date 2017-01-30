@@ -38,15 +38,19 @@ Not frequently updated
 
 <!-- s/\v^(.+): (.+)$/- \1: [`\2`](https:\/\/console.aws.amazon.com\/ec2\/home?region=\1#launchAmi=\2)/ -->
 
-gentoo-20161008-57f97153-669e-5a0e-b227-de1825257a12
+gentoo-20170130-588f5cc4-4ad5-a61a-2be6-5f4766962dfb
 
-- ap-northeast-1: [`ami-8ca17aed`](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-8ca17aed)
-- ap-southeast-1: [`ami-4b8e2928`](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-4b8e2928)
-- eu-central-1: [`ami-9dbc42f2`](https://console.aws.amazon.com/ec2/home?region=eu-central-1#launchAmi=ami-9dbc42f2)
-- sa-east-1: [`ami-8f1785e3`](https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-8f1785e3)
-- us-east-1: [`ami-26f0be31`](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-26f0be31)
-- us-west-1: [`ami-84d891e4`](https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-84d891e4)
-- us-west-2: [`ami-2e68b04e`](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-2e68b04e)
+- ap-northeast-1: [`ami-c8d397af`](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-c8d397af)
+- ap-south-1: [`ami-ef0f7e80`](https://console.aws.amazon.com/ec2/home?region=ap-south-1#launchAmi=ami-ef0f7e80)
+- ap-southeast-1: [`ami-ba3f8ad9`](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-ba3f8ad9)
+- ca-central-1: [`ami-0bc8756f`](https://console.aws.amazon.com/ec2/home?region=ca-central-1#launchAmi=ami-0bc8756f)
+- eu-central-1: [`ami-8f74bae0`](https://console.aws.amazon.com/ec2/home?region=eu-central-1#launchAmi=ami-8f74bae0)
+- eu-west-2: [`ami-fd534699`](https://console.aws.amazon.com/ec2/home?region=eu-west-2#launchAmi=ami-fd534699)
+- sa-east-1: [`ami-a70f6bcb`](https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-a70f6bcb)
+- us-east-1: [`ami-09f40b1f`](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-09f40b1f)
+- us-east-2: [`ami-f33f1a96`](https://console.aws.amazon.com/ec2/home?region=us-east-2#launchAmi=ami-f33f1a96)
+- us-west-1: [`ami-544f1234`](https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-544f1234)
+- us-west-2: [`ami-4b5ae22b`](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-4b5ae22b)
 
 ## Note
 
