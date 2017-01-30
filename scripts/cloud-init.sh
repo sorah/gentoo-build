@@ -7,7 +7,7 @@ source /etc/profile
 set -x
 set -e
 
-emerge -v --noreplace 'app-emulation/cloud-init'
+emerge -v --noreplace '=app-emulation/cloud-init-0.7.8-r2'
 
 cat >/etc/cloud/cloud.cfg <<-'EOC'
 # The top level settings are used as module
