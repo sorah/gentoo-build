@@ -18,6 +18,10 @@ export GB_HOSTNAME=gentoobox
 
 export GB_REMOVE_PORTAGE=1
 
+### systemd
+
+export GB_SYSTEMD_232=1
+
 ### Linux kernel
 
 export GB_KERNEL_PACKAGE='>=sys-kernel/gentoo-sources-4.5.0'
