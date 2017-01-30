@@ -16,7 +16,7 @@ export GB_HOSTNAME=gentoobox
 
 ### Portage
 
-export GB_REMOVE_PORTAGE=1
+# export GB_REMOVE_PORTAGE=1
 
 ### systemd
 
