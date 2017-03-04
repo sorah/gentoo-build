@@ -156,6 +156,11 @@
     },
     {
       "type": "file",
+      "source": "./files",
+      "destination": "/tmp/gentoo-build"
+    },
+    {
+      "type": "file",
       "source": "./packer/variables.base.sh",
       "destination": "/tmp/gentoo-build/variables.sh"
     },

@@ -38,19 +38,19 @@ Not frequently updated
 
 <!-- s/\v^(.+): (.+)$/- \1: [`\2`](https:\/\/console.aws.amazon.com\/ec2\/home?region=\1#launchAmi=\2)/ -->
 
-gentoo-20170130-588f5cc4-4ad5-a61a-2be6-5f4766962dfb
+gentoo-20170304-58bb1960-c7b4-4913-0503-e27fb5777159
 
-- ap-northeast-1: [`ami-c8d397af`](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-c8d397af)
-- ap-south-1: [`ami-ef0f7e80`](https://console.aws.amazon.com/ec2/home?region=ap-south-1#launchAmi=ami-ef0f7e80)
-- ap-southeast-1: [`ami-ba3f8ad9`](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-ba3f8ad9)
-- ca-central-1: [`ami-0bc8756f`](https://console.aws.amazon.com/ec2/home?region=ca-central-1#launchAmi=ami-0bc8756f)
-- eu-central-1: [`ami-8f74bae0`](https://console.aws.amazon.com/ec2/home?region=eu-central-1#launchAmi=ami-8f74bae0)
-- eu-west-2: [`ami-fd534699`](https://console.aws.amazon.com/ec2/home?region=eu-west-2#launchAmi=ami-fd534699)
-- sa-east-1: [`ami-a70f6bcb`](https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-a70f6bcb)
-- us-east-1: [`ami-09f40b1f`](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-09f40b1f)
-- us-east-2: [`ami-f33f1a96`](https://console.aws.amazon.com/ec2/home?region=us-east-2#launchAmi=ami-f33f1a96)
-- us-west-1: [`ami-544f1234`](https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-544f1234)
-- us-west-2: [`ami-4b5ae22b`](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-4b5ae22b)
+- ap-northeast-1: [`ami-14ecbb73`](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-14ecbb73)
+- ap-south-1: [`ami-db6919b4`](https://console.aws.amazon.com/ec2/home?region=ap-south-1#launchAmi=ami-db6919b4)
+- ap-southeast-1: [`ami-6343f300`](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-6343f300)
+- ca-central-1: [`ami-5267da36`](https://console.aws.amazon.com/ec2/home?region=ca-central-1#launchAmi=ami-5267da36)
+- eu-central-1: [`ami-a4b460cb`](https://console.aws.amazon.com/ec2/home?region=eu-central-1#launchAmi=ami-a4b460cb)
+- eu-west-2: [`ami-a5f8edc1`](https://console.aws.amazon.com/ec2/home?region=eu-west-2#launchAmi=ami-a5f8edc1)
+- sa-east-1: [`ami-67dabc0b`](https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-67dabc0b)
+- us-east-1: [`ami-c9cd68df`](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-c9cd68df)
+- us-east-2: [`ami-a59ebbc0`](https://console.aws.amazon.com/ec2/home?region=us-east-2#launchAmi=ami-a59ebbc0)
+- us-west-1: [`ami-14104974`](https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-14104974)
+- us-west-2: [`ami-6076fb00`](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-6076fb00)
 
 ## Note
 
