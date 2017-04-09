@@ -94,6 +94,9 @@
         "ap-southeast-1",
         "ap-south-1"
       ],
+      "tags": {
+        "GentooBuild": "{{user `imagename`}}"
+      },
       "user_data_file": "./packer/aws-user-data.sh",
       "launch_block_device_mappings": [
         {
