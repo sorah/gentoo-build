@@ -24,7 +24,7 @@ export GB_SYSTEMD_232=1
 
 ### Linux kernel
 
-export GB_KERNEL_PACKAGE='>=sys-kernel/gentoo-sources-4.5.0'
+export GB_KERNEL_PACKAGE='>=sys-kernel/gentoo-sources-4.10.0'
 export GB_KERNEL_CONFIG="https://raw.githubusercontent.com/sorah/config/master/linux/gentoo.config"
 
 ### Default user
