@@ -2,14 +2,6 @@
 set -x
 set -e
 
-chroot ${GB_ROOT} /bin/bash <<-'EOF'
-source /etc/profile
-set -x
-set -e
-
-emerge-webrsync
-EOF
-
 cat >> "${GB_ROOT}/etc/portage/make.conf" <<-EOF
 USE="\${USE} ${GB_USE}"
 FEATURES="\${FEATURES} ${GB_FEATURES}"
@@ -31,4 +23,11 @@ if [ -n "${GB_BINPKG_HOST}" ]; then
   echo 'FEATURES="${FEATURES} getbinpkg binpkg-multi-instance"' >> "${GB_ROOT}/etc/portage/make.conf"
 fi
 
+chroot ${GB_ROOT} /bin/bash <<-'EOF'
+source /etc/profile
+set -x
+set -e
+
+emerge-webrsync
+EOF
 
