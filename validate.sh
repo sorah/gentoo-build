@@ -51,7 +51,9 @@ fi
 
 if [ -z "$GB_SKIP_KERNEL" ]; then
   [ -z "$GB_KERNEL_PACKAGE" ] && err "GB_KERNEL_PACKAGE is required"
-  [ -z "$GB_KERNEL_CONFIG" ] && err "GB_KERNEL_CONFIG is required"
+  if [ -z "$GB_KERNEL_TARBALL" ]; then
+    [ -z "$GB_KERNEL_CONFIG" ] && err "GB_KERNEL_CONFIG is required"
+  fi
 fi
 [ -z "$GB_TIMEZONE" ] && err "GB_TIMEZONE is required"
 
