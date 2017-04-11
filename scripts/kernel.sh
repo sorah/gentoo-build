@@ -28,5 +28,5 @@ make localyesconfig
 make -j`nproc`
 make -j`nproc` modules_install
 make install
-  EOF
+EOF
 fi
