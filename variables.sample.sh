@@ -59,6 +59,8 @@ export GB_REMOVE_PORTAGE=0
 #export GB_FEATURES=
 #export GB_USE=
 #export GB_CFLAGS="-O2 -pipe"
+#export GB_MIRRORS="http://ftp.iij.ad.jp/pub/linux/gentoo/"
+#export GB_BINPKG_HOST=""
 
 ### Linux kernel
 
