@@ -8,6 +8,7 @@
     "box_version": "{{isotime `20060102.030405`}}",
     "box_tag": "sorah/gentoo",
     "vagrant_cloud_token": "{{env `ATLAS_TOKEN`}}",
+    "instance_type": "c4.4xlarge",
     "build_password": "HXHW0C6ma3HQzd2"
   },
   "builders": [
@@ -75,7 +76,7 @@
       "subnet_id": "{{user `subnet_id`}}",
       "vpc_id": "{{user `vpc_id`}}",
       "associate_public_ip_address": true,
-      "instance_type": "c4.4xlarge",
+      "instance_type": "{{user `instance_type`}}",
       "ssh_username": "ubuntu",
       "ssh_port": 122,
       "ssh_timeout": "12m",
