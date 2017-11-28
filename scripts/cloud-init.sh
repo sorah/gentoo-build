@@ -9,7 +9,7 @@ set -e
 
 # Stick with cryptography-1.7.1 until https://bugs.gentoo.org/531540 gets resolved
 # (Latest cryptography-2.* requires EC support, thus involves -bindist)
-emerge -v --noreplace -1 '=dev-python/cryptography-1.7.1' '=dev-python/pyopenssl-16.2.0'
+emerge -v --noreplace -1 '=dev-python/cryptography-1.7.1' '=dev-python/pyopenssl-16.2.0' 'dev-python/prettytable'
 
 echo >> /etc/portage/package.accept_keywords
 echo "=app-emulation/cloud-init-17.1 ~*" >> /etc/portage/package.accept_keywords
