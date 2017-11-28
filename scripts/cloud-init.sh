@@ -7,7 +7,13 @@ source /etc/profile
 set -x
 set -e
 
-emerge -v --noreplace '=app-emulation/cloud-init-0.7.8-r2'
+# Stick with cryptography-1.7.1 until https://bugs.gentoo.org/531540 gets resolved
+# (Latest cryptography-2.* requires EC support, thus involves -bindist)
+emerge -v --noreplace -1 '=dev-python/cryptography-1.7.1'
+
+echo >> /etc/portage/package.accept_keywords
+echo "=app-emulation/cloud-init-17.1 ~*" >> /etc/portage/package.accept_keywords
+emerge -v --noreplace '=app-emulation/cloud-init-17.1'
 
 cat >/etc/cloud/cloud.cfg <<-'EOC'
 # The top level settings are used as module
