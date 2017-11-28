@@ -112,8 +112,3 @@ ln -sfv /usr/lib64/systemd/system/cloud-final.service /etc/systemd/system/multi-
 ln -sfv /usr/lib64/systemd/system/cloud-init-local.service /etc/systemd/system/multi-user.target.wants/cloud-init-local.service
 ln -sfv /usr/lib64/systemd/system/cloud-init.service /etc/systemd/system/multi-user.target.wants/cloud-init.service
 EOF
-
-# https://bugs.launchpad.net/cloud-utils/+bug/1587971
-# http://bazaar.launchpad.net/~smoser/ubuntu/yakkety/cloud-utils/pkg/view/head:/bin/growpart (rev 143)
-# https://bugs.gentoo.org/show_bug.cgi?id=611726
-cp -v ./files/growpart "${GB_ROOT}/usr/sbin/growpart"
